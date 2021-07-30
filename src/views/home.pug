@@ -1,7 +1,6 @@
 extend base.pug
+include mixins/video
 
 block content 
-    h1 Home!
-    h1 #{potato}
-    input(placeholder="wahts your name")
-    button send
+    each video in videos 
+        +video(video)
